@@ -14,6 +14,7 @@ def check():
         "message": "Work in progress",
         "probeg": probeg
     }
+    return jsonify(result)
 
 @app.route('/about')
 def about():
