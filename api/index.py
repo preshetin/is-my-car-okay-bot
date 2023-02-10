@@ -1,16 +1,19 @@
-from flask import Flask
-from flask import jsonify
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
+    return '<h1>🚗🧑🏼‍🔧</h1><h1>Is My Car Okay?</h1><p>Track your car health by adding milage and periodic maintence.</p>'
+
+@app.route('/check', methods=["POST"])
+def check():
+    data = request.json 
+    probeg = data.get("probeg")
     result =  {
         "message": "Work in progress",
-        "distance": 600000
+        "probeg": probeg
     }
-    return jsonify(result)
-    return 'Hello, World bro'
 
 @app.route('/about')
 def about():
