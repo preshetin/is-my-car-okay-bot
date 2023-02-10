@@ -9,9 +9,14 @@ def home():
 @app.route('/check', methods=["POST"])
 def check():
     data = request.json 
+
+    # Текущий пробег
     probeg = data.get("probeg")
+
+    # Сравнить текущий пробег с запланированными задачами
+
     result =  {
-        "message": "замена салоного фильтра просрочена на 7000 км",
+        "message": "Work in progress",
         "probeg": probeg
     }
     return jsonify(result)
