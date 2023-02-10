@@ -11,7 +11,7 @@ def check():
     data = request.json 
     probeg = data.get("probeg")
     result =  {
-        "message": "Work in progress",
+        "message": "замена салоного фильтра просрочена на 7000 км",
         "probeg": probeg
     }
     return jsonify(result)
